@@ -1,0 +1,735 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NC Foto | Fotografía con una mirada propia</title>
+  <meta name="description"
+        content="NC Foto. Fotografía de retratos, mascotas, eventos y espectáculos. Vicente López, Buenos Aires.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+
+<!-- PORTADA DE BIENVENIDA -->
+
+<div class="welcome-screen" id="welcomeScreen">
+
+  <video
+    class="welcome-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    poster="img/34.jpg"
+  >
+    <source src="video/Naturalezaaa.mp4" type="video/mp4">
+  </video>
+
+  <div class="welcome-overlay"></div>
+
+  <div class="welcome-content">
+
+    <p class="welcome-top">UNA MIRADA DIFERENTE</p>
+
+    <h1 class="welcome-logo">
+      NC <span>FOTO.</span>
+    </h1>
+
+    <div class="welcome-divider"></div>
+
+    <p class="welcome-phrase">
+      Cada instante tiene una historia.
+    </p>
+
+    <button class="welcome-button"
+            id="enterSite"
+            type="button">
+      INGRESAR AL SITIO
+      <span>↗</span>
+    </button>
+
+  </div>
+
+  <div class="welcome-bottom">
+    <span>FOTOGRAFÍA · ARTE · EMOCIÓN</span>
+    <span>BUENOS AIRES, ARGENTINA</span>
+  </div>
+
+</div>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- HEADER -->
+
+  <header class="header" id="header">
+    <a href="#inicio" class="logo" aria-label="NC Foto, inicio">
+      NC<span>FOTO.</span>
+    </a>
+
+    <button class="menu-btn" id="menuBtn"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="navigation">
+      ☰
+    </button>
+
+    <nav id="navigation" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#experiencia">Mi mirada</a>
+      <a href="#servicios">Colecciones</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto" class="nav-cta">Contactame ↗</a>
+    </nav>
+  </header>
+
+  <!-- MÚSICA COMPACTA -->
+
+  <div class="music-player">
+    <audio id="backgroundMusic" loop preload="none">
+      <source src="audio/ambient.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="music-bars" id="musicBars" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <span id="musicStatus" class="sr-only" aria-live="polite">
+      Música pausada
+    </span>
+
+    <button id="musicToggle"
+            type="button"
+            aria-label="Reproducir música"
+            aria-pressed="false"
+            title="Reproducir música">▶</button>
+
+    <button id="muteToggle"
+            type="button"
+            aria-label="Silenciar música"
+            aria-pressed="false"
+            title="Silenciar música">♫</button>
+  </div>
+
+  <!-- 01 / PORTADA -->
+
+  <section class="hero" id="inicio">
+
+    <div class="hero-slides">
+      <div class="hero-slide active"
+           style="background-image:url('img/7.jpg')"></div>
+      <div class="hero-slide"
+           style="background-image:url('img/3.jpg')"></div>
+      <div class="hero-slide"
+           style="background-image:url('img/5.jpg')"></div>
+      <div class="hero-slide"
+           style="background-image:url('img/1.jpg')"></div>
+    </div>
+
+    <div class="hero-shade"></div>
+
+    <div class="hero-content">
+      <p class="eyebrow">NC FOTO · FOTOGRAFÍA ARTÍSTICA</p>
+
+      <h1>
+        El arte de<br>
+        detener<br>
+        <em>el tiempo.</em>
+      </h1>
+
+      <p class="hero-description">
+        Hay momentos que pasan en un instante,
+        pero merecen quedarse para siempre.
+        Fotografías con sensibilidad, creatividad
+        y una mirada propia.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#portfolio" class="btn btn-gold">
+          Descubrí mi trabajo ↗
+        </a>
+        <a href="#contacto" class="btn btn-outline">
+          Hablemos
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-bottom">
+      <span>VICENTE LÓPEZ · BUENOS AIRES</span>
+
+      <div class="slide-controls">
+        <button id="prevSlide" type="button"
+                aria-label="Foto anterior">←</button>
+        <span id="slideNumber">01 / 04</span>
+        <button id="nextSlide" type="button"
+                aria-label="Foto siguiente">→</button>
+      </div>
+
+      <a href="#portfolio" class="discover-link">
+        DESCUBRÍ MÁS ↓
+      </a>
+    </div>
+
+  </section>
+
+  <!-- FRASE ANIMADA -->
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>
+        FOTOGRAFÍA CON ALMA ✦ MOMENTOS REALES ✦
+        HISTORIAS ÚNICAS ✦ MIRADAS DIFERENTES ✦
+      </span>
+      <span>
+        FOTOGRAFÍA CON ALMA ✦ MOMENTOS REALES ✦
+        HISTORIAS ÚNICAS ✦ MIRADAS DIFERENTES ✦
+      </span>
+    </div>
+  </div>
+
+  <!-- 02 / PORTFOLIO -->
+
+  <section class="section portfolio-section" id="portfolio">
+
+    <div class="section-title reveal">
+      <p class="eyebrow">02 / PORTFOLIO</p>
+      <h2>Una mirada, <em>mil historias.</em></h2>
+      <p>
+        Una selección de momentos, detalles y
+        fotografías que reflejan mi manera de mirar.
+      </p>
+    </div>
+
+    <div class="filters" aria-label="Filtrar fotografías">
+      <button class="active" data-filter="todos"
+              type="button">Todas</button>
+      <button data-filter="retratos"
+              type="button">Retratos</button>
+      <button data-filter="mascotas"
+              type="button">Mascotas</button>
+      <button data-filter="naturaleza"
+              type="button">Naturaleza</button>
+      <button data-filter="arte"
+              type="button">Arte</button>
+    </div>
+
+    <div class="gallery">
+
+      <button class="photo" data-category="mascotas"
+              data-title="Una mirada especial" type="button">
+        <img src="img/7.jpg" alt="Fotografía artística de mascota"
+             loading="lazy">
+        <span>UNA MIRADA ESPECIAL</span>
+      </button>
+
+      <button class="photo" data-category="retratos"
+              data-title="Retratos con personalidad" type="button">
+        <img src="img/3.jpg" alt="Retrato fotográfico"
+             loading="lazy">
+        <span>RETRATOS CON PERSONALIDAD</span>
+      </button>
+
+      <button class="photo" data-category="naturaleza"
+              data-title="Detalles de la naturaleza" type="button">
+        <img src="img/2.jpg" alt="Fotografía de naturaleza"
+             loading="lazy">
+        <span>DETALLES DE LA NATURALEZA</span>
+      </button>
+
+      <button class="photo" data-category="arte"
+              data-title="Expresión artística" type="button">
+        <img src="img/5.jpg" alt="Fotografía artística"
+             loading="lazy">
+        <span>EXPRESIÓN ARTÍSTICA</span>
+      </button>
+
+      <button class="photo" data-category="mascotas"
+              data-title="Pequeños compañeros" type="button">
+        <img src="img/1.jpg" alt="Fotografía de mascota"
+             loading="lazy">
+        <span>PEQUEÑOS COMPAÑEROS</span>
+      </button>
+
+      <button class="photo" data-category="retratos"
+              data-title="Instantes únicos" type="button">
+        <img src="img/6.JPG" alt="Fotografía de retrato"
+             loading="lazy">
+        <span>INSTANTES ÚNICOS</span>
+      </button>
+
+    </div>
+
+    <p class="gallery-note">
+      Tocá cualquier fotografía para verla en grande.
+    </p>
+
+  </section>
+
+  <!-- VISOR DEL PORTFOLIO -->
+
+  <div class="lightbox" id="lightbox"
+       role="dialog" aria-modal="true"
+       aria-label="Fotografía ampliada"
+       aria-hidden="true">
+
+    <button id="closeLightbox" class="lightbox-close"
+            type="button" aria-label="Cerrar">×</button>
+
+    <button id="lightboxPrev" class="lightbox-arrow prev"
+            type="button" aria-label="Anterior">‹</button>
+
+    <img id="lightboxImage" alt="">
+
+    <button id="lightboxNext" class="lightbox-arrow next"
+            type="button" aria-label="Siguiente">›</button>
+
+    <div id="lightboxCaption" class="lightbox-caption"></div>
+  </div>
+
+  <!-- EXPERIENCIA / COMPARADOR -->
+
+  <section class="section experience" id="experiencia">
+
+    <div class="section-title reveal">
+      <p class="eyebrow">LA MIRADA DETRÁS DE LA FOTO</p>
+      <h2>Una imagen, <em>dos sensaciones.</em></h2>
+      <p>
+        La luz, el color y los contrastes pueden
+        transformar la manera en que sentimos una imagen.
+        Deslizá para descubrirlo.
+      </p>
+    </div>
+
+    <div class="comparison reveal" id="comparison">
+
+      <img class="comparison-original"
+           src="img/3.jpg"
+           alt="Fotografía original a color">
+
+      <div class="comparison-top" id="comparisonTop">
+        <img src="img/3.jpg" alt="Versión en blanco y negro">
+      </div>
+
+      <div class="comparison-line" id="comparisonLine">
+        <span>↔</span>
+      </div>
+
+      <span class="compare-label left">B&N</span>
+      <span class="compare-label right">COLOR</span>
+
+      <input type="range"
+             id="compareRange"
+             min="0" max="100" value="50"
+             aria-label="Comparar blanco y negro con color">
+
+    </div>
+
+  </section>
+
+  <!-- 03 / COLECCIONES -->
+
+  <section class="section collections-section" id="servicios">
+
+    <div class="collections-heading reveal">
+      <p class="eyebrow">03 / SERVICIOS FOTOGRÁFICOS</p>
+
+      <h2>
+        Historias a través<br>
+        <em>de mi lente.</em>
+      </h2>
+
+      <p>
+        Cada colección tiene una historia diferente.
+        Elegí una categoría, explorá sus fotografías
+        y descubrí cada detalle.
+      </p>
+    </div>
+
+    <div class="collections-grid">
+
+      <button class="collection-card collection-card--large"
+              data-album="retratos" type="button">
+        <img src="img/3.jpg" alt="Colección de retratos"
+             loading="lazy">
+        <span class="collection-shade"></span>
+        <span class="collection-number">01 / COLECCIÓN</span>
+        <span class="collection-content">
+          <span class="collection-title">Retratos</span>
+          <span class="collection-link">
+            Explorar colección <span>↗</span>
+          </span>
+        </span>
+      </button>
+
+      <button class="collection-card"
+              data-album="mascotas" type="button">
+        <img src="img/7.jpg" alt="Colección de mascotas"
+             loading="lazy">
+        <span class="collection-shade"></span>
+        <span class="collection-number">02 / COLECCIÓN</span>
+        <span class="collection-content">
+          <span class="collection-title">Mascotas</span>
+          <span class="collection-link">
+            Explorar colección <span>↗</span>
+          </span>
+        </span>
+      </button>
+
+      <button class="collection-card"
+              data-album="eventos" type="button">
+        <img src="img/4.jpg" alt="Colección de eventos"
+             loading="lazy">
+        <span class="collection-shade"></span>
+        <span class="collection-number">03 / COLECCIÓN</span>
+        <span class="collection-content">
+          <span class="collection-title">Eventos</span>
+          <span class="collection-link">
+            Explorar colección <span>↗</span>
+          </span>
+        </span>
+      </button>
+
+      <button class="collection-card collection-card--wide"
+              data-album="arte" type="button">
+        <img src="img/27.jpg" alt="Arte y espectáculos"
+             loading="lazy">
+        <span class="collection-shade"></span>
+        <span class="collection-number">04 / COLECCIÓN</span>
+        <span class="collection-content">
+          <span class="collection-title">Arte y espectáculos</span>
+          <span class="collection-link">
+            Explorar colección <span>↗</span>
+          </span>
+        </span>
+      </button>
+
+<!-- 05 / NATURALEZA -->
+
+<button class="collection-card collection-card--nature"
+        data-album="naturaleza" type="button">
+
+  <img src="img/34.jpg"
+       alt="Colección de fotografía de naturaleza"
+       loading="lazy">
+
+  <span class="collection-shade"></span>
+
+  <span class="collection-number">
+    05 / COLECCIÓN
+  </span>
+
+  <span class="collection-content">
+    <span class="collection-title">
+      Naturaleza
+    </span>
+
+    <span class="collection-link">
+      Explorar colección <span>↗</span>
+    </span>
+  </span>
+
+</button>
+
+<!-- 06 / URBANO -->
+
+<button class="collection-card collection-card--urban"
+        data-album="urbano" type="button">
+
+  <img src="img/9.jpg"
+       alt="Colección de fotografía urbana"
+       loading="lazy">
+
+  <span class="collection-shade"></span>
+
+  <span class="collection-number">
+    06 / COLECCIÓN
+  </span>
+
+  <span class="collection-content">
+
+    <span class="collection-title">
+      Urbano
+    </span>
+
+    <span class="collection-link">
+      Explorar colección <span>↗</span>
+    </span>
+
+  </span>
+
+</button>
+
+    </div>
+
+  </section>
+
+  <!-- ÁLBUM DE COLECCIÓN -->
+
+  <div class="album-overlay" id="albumOverlay"
+       role="dialog" aria-modal="true"
+       aria-labelledby="albumTitle"
+       aria-hidden="true">
+
+    <div class="album-panel">
+
+      <div class="album-header">
+        <div>
+          <p class="eyebrow">NC FOTO / COLECCIÓN</p>
+          <h2 id="albumTitle"></h2>
+          <p id="albumDescription"></p>
+        </div>
+
+        <button class="album-close" id="albumClose"
+                type="button" aria-label="Cerrar álbum">×</button>
+      </div>
+
+      <div class="album-gallery" id="albumGallery"></div>
+
+      <div class="album-footer">
+        <p>¿Te gustaría tener tus propias fotografías?</p>
+
+        <a class="btn btn-gold" id="albumContact"
+           href="#" target="_blank"
+           rel="noopener noreferrer">
+          Consultar por esta sesión ↗
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- VISOR DE FOTOS DEL ÁLBUM -->
+
+  <div class="album-viewer" id="albumViewer"
+       role="dialog" aria-modal="true"
+       aria-label="Fotografía de colección ampliada"
+       aria-hidden="true">
+
+    <button class="album-viewer-close" id="viewerClose"
+            type="button" aria-label="Cerrar fotografía">×</button>
+
+    <button class="album-viewer-prev" id="viewerPrev"
+            type="button" aria-label="Anterior">‹</button>
+
+    <img id="viewerImage" alt="">
+
+    <button class="album-viewer-next" id="viewerNext"
+            type="button" aria-label="Siguiente">›</button>
+
+    <div class="album-viewer-counter" id="viewerCounter"></div>
+
+  </div>
+
+  <!-- 04 / SOBRE MÍ -->
+
+  <section class="section about" id="sobre-mi">
+
+    <div class="about-photo reveal">
+      <img src="img/36.JPG"
+           alt="Fotografía de presentación de NC Foto"
+           loading="lazy">
+      <span>DETRÁS DE NC FOTO</span>
+    </div>
+
+    <div class="about-content reveal">
+      <p class="eyebrow">04 / SOBRE MÍ</p>
+
+      <h2>
+        Hola, soy<br>
+        <em>Nahiara.</em>
+      </h2>
+
+      <p>
+        Me gusta encontrar belleza en los pequeños detalles,
+        en las miradas espontáneas y en esos momentos que
+        muchas veces pasan desapercibidos.
+      </p>
+
+      <p>
+        A través de NC Foto busco explorar distintas formas
+        de contar historias, experimentar con la luz
+        y crear fotografías que transmitan algo especial.
+      </p>
+
+      <p>
+        Cada sesión es una oportunidad para conocer
+        una historia diferente y capturarla desde
+        mi propia mirada.
+      </p>
+
+      <a href="#contacto" class="btn btn-outline">
+        Trabajemos juntos ↗
+      </a>
+    </div>
+
+  </section>
+
+  <!-- 05 / CONTACTO -->
+
+  <section class="section quote-section" id="contacto">
+
+    <div class="section-title reveal">
+      <p class="eyebrow">05 / CONTACTO</p>
+
+      <h2>
+        Hagamos algo<br>
+        <em>inolvidable.</em>
+      </h2>
+
+      <p>
+        Contame qué tenés en mente y conversemos
+        sobre tu próxima sesión de fotos.
+      </p>
+    </div>
+
+    <div class="quote-layout">
+
+      <form class="quote-form reveal" id="quoteForm">
+
+        <label for="nombre">Tu nombre *</label>
+        <input id="nombre" type="text"
+               placeholder="¿Cómo te llamás?"
+               required>
+
+        <label for="servicio">¿Qué te gustaría fotografiar? *</label>
+        <select id="servicio" required>
+          <option value="">Seleccioná una opción</option>
+          <option value="Retratos">Retratos</option>
+          <option value="Mascotas">Mascotas</option>
+          <option value="Eventos">Eventos</option>
+          <option value="Arte y espectáculos">
+            Arte y espectáculos
+          </option>
+          <option value="Otra propuesta">Otra propuesta</option>
+        </select>
+
+        <label for="fecha">Fecha aproximada</label>
+        <input id="fecha" type="date">
+
+        <label for="horas">Duración aproximada</label>
+        <select id="horas">
+          <option value="">Todavía no lo sé</option>
+          <option value="1 hora">1 hora</option>
+          <option value="2 horas">2 horas</option>
+          <option value="3 a 4 horas">3 a 4 horas</option>
+          <option value="Más de 4 horas">Más de 4 horas</option>
+        </select>
+
+        <label for="ubicacion">Localidad</label>
+        <input id="ubicacion" type="text"
+               placeholder="¿Dónde sería?">
+
+        <label for="mensaje">Contame tu idea</label>
+        <textarea id="mensaje" rows="5"
+                  placeholder="Me gustaría hacer una sesión..."></textarea>
+
+        <button type="submit" class="btn btn-gold">
+          Enviar consulta por WhatsApp ↗
+        </button>
+
+        <p class="form-note">
+          Al enviar, se abrirá WhatsApp con tu consulta
+          preparada para Naharia.
+        </p>
+
+      </form>
+
+      <div class="quote-info reveal">
+        <p class="eyebrow">HABLEMOS DE TU IDEA</p>
+
+        <h3>
+          Las mejores historias<br>
+          empiezan con una charla.
+        </h3>
+
+        <p>
+          Ya sea una sesión personal, una celebración
+          o una propuesta artística, podés escribirme
+          para contarme lo que imaginás.
+        </p>
+
+        <div class="info-item">
+          <span>UBICACIÓN</span>
+          <p>Vicente López · Buenos Aires</p>
+        </div>
+
+        <div class="info-item">
+          <span>INSTAGRAM</span>
+          <a href="https://www.instagram.com/ncfoto/"
+             target="_blank" rel="noopener noreferrer">
+            @ncfoto ↗
+          </a>
+        </div>
+
+        <div class="info-item">
+          <span>WHATSAPP</span>
+          <a href="https://wa.me/5491127235727"
+             target="_blank" rel="noopener noreferrer">
+            +54 9 11 2723-5727 ↗
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+
+    <div class="footer-logo">NC FOTO.</div>
+
+    <p>Fotografías que cuentan historias.</p>
+
+    <div class="footer-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#servicios">Colecciones</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+
+    <p class="webmic">
+      Diseño y desarrollo por
+      <a href="https://www.instagram.com/webmic/"
+         target="_blank" rel="noopener noreferrer">
+        WebMic
+      </a>
+    </p>
+
+    <small>© <span id="year"></span> NC Foto.</small>
+
+  </footer>
+
+  <!-- WHATSAPP FLOTANTE -->
+
+  <a class="floating-whatsapp"
+     href="https://wa.me/5491127235727"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Consultar por WhatsApp"
+     title="Escribime por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"
+         aria-hidden="true">
+      <path d="M20.52 3.48A11.87 11.87 0 0 0 12.05 0C5.45 0 .08 5.37.08 11.97c0 2.1.55 4.15 1.6 5.96L0 24l6.25-1.64a11.95 11.95 0 0 0 5.8 1.48h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.51-8.39ZM12.06 21.8a9.88 9.88 0 0 1-5.04-1.38l-.36-.21-3.74.98.99-3.64-.24-.38a9.9 9.9 0 0 1-1.52-5.2c0-5.47 4.45-9.92 9.92-9.92 2.65 0 5.14 1.03 7.01 2.91a9.86 9.86 0 0 1 2.9 7.01c0 5.47-4.45 9.92-9.92 9.92Zm5.44-7.43c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+    </svg>
+  </a>
+
+</body>
+</html>
