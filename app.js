@@ -283,7 +283,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "img/3.jpg",
         "img/5.JPG",
         "img/18.jpg",
-        "img/20.jpg",
         "img/21.jpg",
         "img/22.jpg",
         "img/23.jpg",
