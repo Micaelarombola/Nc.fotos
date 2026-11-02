@@ -384,12 +384,18 @@ document.addEventListener("DOMContentLoaded", () => {
       albumGallery.appendChild(button);
     });
 
-    const message =
-      `¡Hola, Nahiara! Quisiera consultar por una sesión de ${album.title}.`;
+   
+const message =
+  `¡Hola, Nahiara! 📸\n\n` +
+  `Estuve viendo tu página NC Foto y me gustaría consultar por una sesión de ${album.title}.\n\n` +
+  `¿Podrías contarme sobre la disponibilidad y los presupuestos? ¡Muchas gracias!`;
 
-    $("albumContact").href =
-      "https://wa.me/5491127235727?text=" +
-      encodeURIComponent(message);
+const whatsappURL = new URL("https://api.whatsapp.com/send");
+whatsappURL.searchParams.set("phone", "5491127235727");
+whatsappURL.searchParams.set("text", message);
+
+$("albumContact").href = whatsappURL.toString();
+
 
     albumOverlay.classList.add("open");
     albumOverlay.setAttribute("aria-hidden", "false");
@@ -633,11 +639,12 @@ document.addEventListener("DOMContentLoaded", () => {
       "¿Podrías indicarme disponibilidad y presupuesto?"
     ].join("\n");
 
-    const url =
-      "https://wa.me/5491127235727?text=" +
-      encodeURIComponent(text);
+   const mensajeWhatsApp = encodeURIComponent(text);
 
-    window.open(url, "_blank", "noopener,noreferrer");
+const urlWhatsApp =
+  `https://api.whatsapp.com/send?phone=5491127235727&text=${mensajeWhatsApp}`;
+
+window.open(urlWhatsApp, "_blank");
   });
 
   // =====================================
