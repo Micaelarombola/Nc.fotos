@@ -317,15 +317,6 @@ document.addEventListener("DOMContentLoaded", () => {
       ]
     },
 
-    arte: {
-      title: "Arte y espectáculos",
-      description: "Movimiento, emoción y expresión en cada imagen.",
-      photos: [
-        "img/26.jpg",
-        "img/27.jpg",
-        "img/28.jpg"
-      ]
-    },
 
     naturaleza: {
       title: "Naturaleza",
@@ -344,15 +335,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ]
     },
 
-    urbano: {
-      title: "Urbano",
-      description: "Calles, arquitectura, luces y rincones de la ciudad.",
-      photos: [
-        "img/10.jpg",
-        "img/25.jpg",
-        "img/35.jpg"
-      ]
-    }
+
   };
 
   const albumOverlay = $("albumOverlay");
